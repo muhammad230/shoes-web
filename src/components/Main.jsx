@@ -1,41 +1,78 @@
-import React from 'react'
+import React from "react";
 
 const Main = () => {
   return (
-    <div className="flex flex-row p-10 gap-10">
+    <div className="max-w-6xl mx-auto p-10 grid md:grid-cols-2 gap-12 items-center">
 
-      {/* Images Section */}
-      <div className="flex flex-col w-1/2">
-
-        {/* Large Image */}
-        <img 
-          src="/images/image-product-1.jpg" 
-          className="w-full max-w-[500px] rounded-2xl mb-5" 
-          alt="Main Product" 
+      {/* ===== Images Section ===== */}
+      <div>
+        {/* Big Image */}
+        <img
+          src="/images/image-product-1.jpg"
+          alt="Sneaker"
+          className="w-full rounded-2xl mb-5"
         />
 
         {/* Small Images */}
-        <div className="flex gap-5">
-          <img src="/images/image-product-1.jpg" className="w-[100px] h-[100px] object-cover rounded-2xl cursor-pointer border-2 border-transparent" alt="" />
-          <img src="/images/image-product-2.jpg" className="w-[100px] h-[100px] object-cover rounded-2xl cursor-pointer border-2 border-transparent" alt="" />
-          <img src="/images/image-product-3.jpg" className="w-[100px] h-[100px] object-cover rounded-2xl cursor-pointer border-2 border-transparent" alt="" />
-          <img src="/images/image-product-4.jpg" className="w-[100px] h-[100px] object-cover rounded-2xl cursor-pointer border-2 border-transparent" alt="" />
+        <div className="flex gap-4">
+          <img
+            src="/images/image-product-1.jpg"
+            className="w-20 h-20 rounded-xl object-cover border-2 border-orange-500 opacity-70"
+            alt=""
+          />
+          <img
+            src="/images/image-product-2.jpg"
+            className="w-20 h-20 rounded-xl object-cover"
+            alt=""
+          />
+          <img
+            src="/images/image-product-3.jpg"
+            className="w-20 h-20 rounded-xl object-cover"
+            alt=""
+          />
+          <img
+            src="/images/image-product-4.jpg"
+            className="w-20 h-20 rounded-xl object-cover"
+            alt=""
+          />
         </div>
-
       </div>
 
-      {/* Text Section */}
-      <div className="w-1/2 flex flex-col justify-center gap-4">
-        <p className="text-gray-500">Snooker Company</p>
-        <h1 className="text-4xl font-bold">Fall Limited Edition</h1>
-        <p className="text-gray-700">
+      {/* ===== Text Section ===== */}
+      <div className="space-y-6">
+
+        <p className="text-orange-500 font-bold tracking-widest uppercase text-sm">
+          Sneaker Company
+        </p>
+
+        <h1 className="text-4xl font-bold leading-snug">
+          Fall Limited Edition Sneakers
+        </h1>
+
+        <p className="text-gray-500 leading-relaxed">
           These low-profile sneakers are your perfect casual wear companion.
           Featuring a durable rubber outer sole.
         </p>
+
+        {/* Price */}
+        <div>
+          <div className="flex items-center gap-4">
+            <h2 className="text-2xl font-bold">$125.00</h2>
+            <span className="bg-orange-100 text-orange-600 px-2 py-1 rounded font-bold text-sm">
+              50%
+            </span>
+          </div>
+          <p className="text-gray-400 line-through">$250.00</p>
+        </div>
+
+        {/* Add to Cart Button */}
+        <button className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-3 rounded-lg font-bold shadow-md">
+          Add to Cart
+        </button>
+
       </div>
-
     </div>
-  )
-}
+  );
+};
 
-export default Main
+export default Main;
