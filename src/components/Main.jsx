@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Detail from "./Details";
 
 const Main = () => {
   const [count, setcount] = useState(1);
@@ -106,18 +107,14 @@ const Main = () => {
         </div>
 
         {/* Add to Cart */}
-        <button onClick={() => setShowPopup(true)} className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-3 rounded-lg font-bold shadow-md">
+        <button
+          onClick={() => setShowPopup(true)}
+          className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-3 rounded-lg font-bold shadow-md"
+        >
           Add to Cart
         </button>
-        {showPopup && (
-  <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-    <div className="bg-white p-6 rounded shadow-lg">
-      <p>Item added to cart!</p>
-      <button onClick={() => setShowPopup(false)}>Close</button>
-    </div>
-  </div>
-)}
       </div>
+      <Detail showPopup={showPopup} setShowPopup={setShowPopup} />
     </div>
   );
 };
