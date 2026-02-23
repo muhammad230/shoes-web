@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import Detail from "./Details";
 
 const Main = () => {
   const [count, setcount] = useState(1);
   const [mainImg, setMainImg] = useState("/images/image-product-1.jpg");
+  const [showPopup, setShowPopup] = useState(false);
 
   return (
     <div className="max-w-6xl mx-auto p-10 grid md:grid-cols-2 gap-12 items-center">
@@ -105,10 +107,14 @@ const Main = () => {
         </div>
 
         {/* Add to Cart */}
-        <button className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-3 rounded-lg font-bold shadow-md">
+        <button
+          onClick={() => setShowPopup(true)}
+          className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-3 rounded-lg font-bold shadow-md"
+        >
           Add to Cart
         </button>
       </div>
+      <Detail showPopup={showPopup} setShowPopup={setShowPopup} />
     </div>
   );
 };
