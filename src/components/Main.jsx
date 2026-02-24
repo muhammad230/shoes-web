@@ -115,7 +115,16 @@ const Main = () => {
         </button>
       </div>
       <Detail showPopup={showPopup} setShowPopup={setShowPopup} />
+      <Detail
+      showPopup={showPopup}
+      setShowPopup={setShowPopup}
+      product="Fall Limited Edition Sneakers"
+      price={125}
+      count={count}
+      img={mainImg}
+    />
     </div>
+    
   );
 };
 
