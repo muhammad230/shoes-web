@@ -116,13 +116,23 @@ const Main = () => {
       </div>
       <Detail showPopup={showPopup} setShowPopup={setShowPopup} />
       <Detail
+
       showPopup={showPopup}
       setShowPopup={setShowPopup}
       product="Fall Limited Edition Sneakers"
       price={125}
       count={count}
       img={mainImg}
-    />
+      />
+      <Detail
+        showPopup={showPopup}
+        setShowPopup={setShowPopup}
+        product="Fall Limited Edition Sneakers"
+        price={125}
+        count={count}
+        img={mainImg}
+      />
+
     </div>
     
   );
