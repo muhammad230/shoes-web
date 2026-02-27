@@ -27,10 +27,10 @@ const Main = () => {
           />
 
           <img
-            src="/images/image-product-2.jpg"
-            onClick={() => setMainImg("/images/image-product-2.jpg")}
+            src="/images/img.2.webp"
+            onClick={() => setMainImg("/images/img.2.webp")}
             className={`w-20 h-20 rounded-xl object-cover cursor-pointer border-2 ${
-              mainImg === "/images/image-product-2.jpg"
+              mainImg === "/images/img.2.webp"
                 ? "border-orange-500 opacity-70"
                 : "border-transparent"
             }`}
@@ -38,10 +38,10 @@ const Main = () => {
           />
 
           <img
-            src="/images/image-product-3.jpg"
-            onClick={() => setMainImg("/images/image-product-3.jpg")}
+            src="/images/img.3.jpg"
+            onClick={() => setMainImg("/images/img.3.jpg")}
             className={`w-20 h-20 rounded-xl object-cover cursor-pointer border-2 ${
-              mainImg === "/images/image-product-3.jpg"
+              mainImg === "/images/img.3.jpg"
                 ? "border-orange-500 opacity-70"
                 : "border-transparent"
             }`}
@@ -124,15 +124,7 @@ const Main = () => {
       count={count}
       img={mainImg}
       />
-      <Detail
-        showPopup={showPopup}
-        setShowPopup={setShowPopup}
-        product="Fall Limited Edition Sneakers"
-        price={125}
-        count={count}
-        img={mainImg}
-      />
-
+    
     </div>
     
   );
