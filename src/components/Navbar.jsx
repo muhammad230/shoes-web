@@ -11,7 +11,7 @@ const Navbar = () => {
           <li><a href="#" className="text-gray-800 hover:text-black hover:border-b-2 border-orange-500">About</a></li>
           <li><a href="#" className="text-gray-800 hover:text-black hover:border-b-2 border-orange-500">Contact</a></li>
         </ul>
-        <div className="h-8 w-8 cursor-pointer">
+        <div className="h-20 w-20 cursor-pointer">
           <img src="/images/shopping-cart-icon-free-vector.jpg" alt="" />
         </div>
       
